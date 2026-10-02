@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SMS · 技能矩阵 — skill_manage_system 与 PUBLIC 技能展示</title>
+<meta name="description" content="技能操作系统（SMS）与其托管的 PUBLIC Agent Skill 一览：sms-core、sms-shell、llm-router、Skill_Generator、专家顾问系列、自动化与视觉、EDA。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>🧩</text></svg>">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="./"><span class="logo">🧩</span> SMS <em>·</em> 技能矩阵</a>
+  <nav>
+    <a href="#overview">概览</a>
+    <a href="#skills">技能</a>
+    <a href="#architecture">架构</a>
+    <a href="https://github.com/XianYin69" target="_blank" rel="noopener">GitHub ↗</a>
+  </nav>
+</header>
+
+<section class="hero" id="overview">
+  <h1>技能操作系统 <span>SMS</span></h1>
+  <p class="lead">LLM 主导 · 脚本辅助：链式记忆、任务表调度、SOLO 自审与做梦式自动修复，
+     把一堆 Agent Skill 编排成可自我迭代的开发环境。</p>
+  <div class="stats" id="stats"></div>
+</section>
+
+<section class="controls" id="skills">
+  <input id="q" type="search" placeholder="搜索技能名 / 关键词（按 / 聚焦）" autocomplete="off">
+  <div class="chips" id="chips"></div>
+</section>
+
+<main>
+  <div class="grid" id="grid"></div>
+  <p class="empty" id="empty" hidden>没有匹配的技能。</p>
+
+  <section class="arch" id="architecture">
+    <h2>架构分层</h2>
+    <div class="layers">
+      <div class="layer"><b>shell</b><span>Textual TUI / GUI / Web 前端与启动器，只依赖 core</span></div>
+      <div class="layer"><b>core</b><span>网关、十一链记忆、权限门、SOLO、QQ 通道、计划任务</span></div>
+      <div class="layer"><b>skill</b><span>skill_manage_system 调度 + 各托管技能（本页面所列）</span></div>
+      <div class="layer"><b>router</b><span>llm-router：OpenAI 兼容多提供商网关，密钥轮换与故障转移</span></div>
+    </div>
+    <p class="note">本页仅收录 GitHub 可见性为 <b>PUBLIC</b> 的自建仓库；私有技能（如屏幕视觉、验证码辅助、登录保险库）不在此列。</p>
+  </section>
+</main>
+
+<footer>
+  <span id="foot"></span>
+  <span>源码：<a href="https://github.com/XianYin69/sms-skills-site" target="_blank" rel="noopener">sms-skills-site</a></span>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

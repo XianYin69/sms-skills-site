@@ -1,0 +1,30 @@
+:root{
+  --bg:#0b0f14; --bg2:#111823; --card:#141d2a; --line:#22303f;
+  --fg:#e6edf3; --dim:#93a4b6; --acc:#4cc2ff; --acc2:#7ee787; --warn:#f0a35e;
+  --mono:ui-monospace,SFMono-Regular,"Cascadia Mono",Consolas,"Liberation Mono",monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(1200px 600px at 15% -10%,#16283a 0%,var(--bg) 60%);
+  color:var(--fg);font:16px/1.6 "Segoe UI","Microsoft YaHei",system-ui,sans-serif}
+a{color:var(--acc);text-decoration:none}
+a:hover{text-decoration:underline}
+
+.topbar{position:sticky;top:0;z-index:9;display:flex;align-items:center;justify-content:space-between;
+  gap:16px;padding:14px clamp(16px,4vw,48px);backdrop-filter:blur(10px);
+  background:rgba(11,15,20,.78);border-bottom:1px solid var(--line)}
+.brand{font-weight:700;letter-spacing:.5px;color:var(--fg)}
+.brand em{color:var(--acc);font-style:normal;margin:0 4px}
+.brand .logo{margin-right:8px}
+.topbar nav{display:flex;gap:clamp(10px,2vw,24px);flex-wrap:wrap}
+.topbar nav a{color:var(--dim);font-size:14px}
+.topbar nav a:hover{color:var(--fg);text-decoration:none}
+
+.hero{padding:clamp(32px,7vw,72px) clamp(16px,4vw,48px) 24px;max-width:1100px;margin:0 auto}
+.hero h1{font-size:clamp(28px,5vw,46px);margin:0 0 10px}
+.hero h1 span{color:var(--acc);font-family:var(--mono);font-size:.7em;vertical-align:middle}
+.lead{color:var(--dim);max-width:70ch;margin:0}
+.stats{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.stat{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:10px 16px;min-width:104px}
+.stat b{display:block;font-size:22px;color:var(--acc2);font-family:var(--mono)}
+.stat span{font-size:12px;color:var(--dim)}
